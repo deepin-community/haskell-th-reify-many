@@ -1,0 +1,84 @@
+Source: haskell-th-reify-many
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Christopher Reichert <creichert07@gmail.com>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-safe-dev,
+ libghc-safe-prof,
+ libghc-th-expand-syns-dev,
+ libghc-th-expand-syns-prof,
+Build-Depends-Indep:
+ ghc-doc,
+ libghc-safe-doc,
+ libghc-th-expand-syns-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/mgsloan/th-reify-many
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-th-reify-many
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-th-reify-many]
+X-Description: recurseively reify template haskell datatype info
+ This package provides functions for recursively reifying top
+ level declarations.  The main intended use case is for enumerating
+ the names of datatypes reachable from an initial datatype, and
+ passing these names to some function which generates instances.
+
+Package: libghc-th-reify-many-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Conflicts:
+ ${haskell:Conflicts},
+Provides:
+ ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+  ${haskell:LongDescription}
+  .
+  ${haskell:Blurb}
+
+Package: libghc-th-reify-many-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Conflicts:
+ ${haskell:Conflicts},
+Provides:
+ ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+  ${haskell:LongDescription}
+  .
+  ${haskell:Blurb}
+
+Package: libghc-th-reify-many-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Conflicts:
+ ${haskell:Conflicts},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+  ${haskell:LongDescription}
+  .
+  ${haskell:Blurb}
